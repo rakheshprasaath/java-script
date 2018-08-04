@@ -1,0 +1,30 @@
+<html>
+<body>
+<p id="r"></p>
+<button onclick="cli()" > click to wish</button>
+<script>
+function cli()
+{
+var d = new Date().getHours(),g;
+if (d<11)
+{
+ g="gud mrg";
+}
+else if (d<14)
+{
+g="gud aft nn";
+}
+else if (d<18)
+{
+g="gu eve";
+}
+else 
+{
+g="gud nit";
+}
+document.getElementById("r").innerHTML = g;
+}
+</script>
+</body>
+</html>
+
