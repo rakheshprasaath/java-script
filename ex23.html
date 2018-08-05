@@ -1,0 +1,29 @@
+<!--javascript code to check Input Length-->
+<html>
+<head>
+<title>Length Check</title>
+</head>
+<body>
+<label for="word">Enter a Sentence:</label>
+
+<input id="word">
+
+<button type="button" onclick="len()">Submit</button>
+(less than 10)
+
+<script>
+function len() {
+    var x, text;
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("word").value;
+    if (x.length>10) {
+        text = "Input is too large";
+    } else {
+        text = "Input OK";
+    }
+    alert(text);
+}
+</script>
+
+</body>
+</html> 

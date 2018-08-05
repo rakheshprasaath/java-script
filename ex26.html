@@ -1,0 +1,31 @@
+<!--HTML javascript code to demonstrate form validation-->
+<html>
+<head>
+<title>Form validation</title>
+</head>
+<body>
+<form name="myForm" >
+Name:<input type="text" name="name"><br><br>
+Email: <input type="text" name="email">
+<br><br>
+Enter text here...</textarea>
+</form>
+<button onclick="valid()" >Register</button>
+<script>
+function valid()
+{
+var x=document.forms["myForm"]["name"].value;
+var y = document.forms["myForm"]["email"].value;
+    var at = y.indexOf("@");
+    var dot = y.lastIndexOf(".");
+    if (at == -1 || dot == -1 || x =="") 
+{
+        alert("Invalid Input");}
+    else
+{
+alert("Registred Successfully");
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!--java script to check input value is number-->
+<html>
+<head>
+<title>Number Check</title>
+</head>
+<body>
+<label for="numb">Enter a number</label>
+
+<input id="numb">
+
+<button type="button" onclick="num()">Submit</button>
+
+
+<script>
+function num()
+ {
+    var x, text;
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) )
+    {
+       alert("Input not valid");
+    }
+  else
+    {
+       alert("Input OK");
+    }
+    
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+<!--javascript  to check input isalphabet-->
+<html>
+<head>
+<title>Alphabet Check</title>
+</head>
+<body>
+<label for="numb">Enter a Word</label>
+
+<input id="word">
+
+<button type="button" onclick="alpha()">Submit</button>
+
+
+<script>
+function alpha() {
+    var x, text;
+    // Get the value of the input field with id="word"
+    x = document.getElementById("word").value;
+    if (!x.match(/^[a-zA-Z]+$/))
+    {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    alert(text);
+}
+</script>
+
+</body>
+</html> 
