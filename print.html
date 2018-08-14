@@ -1,0 +1,143 @@
+<html>
+<body>
+
+<title>registration form</title>
+
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script>
+
+function readURL(input)
+ {
+        if (input.files && input.files[0])
+        {
+          var reader = new FileReader();
+
+            reader.onload = function (e)
+            {
+                    $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+}
+</script>
+<style>
+article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+div
+{
+border-style: solid;
+border-width: thick;
+text-align: center;
+background-color:Gray;
+}
+
+</style>
+</head>
+
+<body>
+<!--FORM2-->
+<div  id="r1" width="595px" height="842px" style="display:block;">
+
+<form>
+<h1><bold>BIO DATA</bold></h1>
+NAME<input type="text" size="30"  name="name" maxlength="20"><br><br><br> 
+DOB<input type="date" name="birth day"><br><br><br>
+
+Photo:
+<input type='file' onchange="readURL(this);" />
+    <img id="blah" src="#" alt="your image" />
+<br><br><br>
+GENDER<input type="radio" name="gender" value="male"checked>male
+<input type="radio" name="gender" value="female"checked>female
+<input type="radio" name="gender" value="others"checked>others
+<br><br><br>
+PASSWORD<input type="password">
+<br><br><br>
+HOBBIES <input type="checkbox" name="hobby" value="reading books" />reading books
+	<input type="checkbox" name="hobby" value="watch movies" />watch movies
+	<input type="checkbox" name="hobby" value="bike rides" />bike rides<br><br><br>
+</form>
+<button class="but"  onclick="next()">Next</button>
+
+</div>
+<!--FORM2-->
+<div id="r2"  width="595px" height="842px" style="display:none;">
+
+<form>
+<h1><bold>CONTACT FORM</bold></h1><br><br><br>
+
+COUNTRY NAME<select name="countries">
+        <option value="">------------Select country------------</option>
+	<option value="america">america</option> 
+	<option value="bahrain">bahrain</option> 
+	<option value="china">china</option> 
+	<option value="dubai">dubai</option> 
+	<option value="india">india</option> 
+	<option value="japan">japan</option> 
+</select><br><br><br>
+
+STATE NAME<select name=slist>
+<option value="">------------Select State------------</option>
+<option value="newyork">new york</option>
+<option value="riffa">riffa</option>
+<option value="zheijiang">zeijiang</option>
+<option value="affazz">affazz</option>
+<option value="tamilnadu">tamilnadu</option>
+<option value="zinguh">zinguh</option>
+</select><br><br><br>
+
+CITY<input type="text" name="city"><br><br><br>
+
+PINCODE<input type="num" name="pincode"><br><br><br>
+
+MOBILE NO<input type="num" name="MobileNo"><br><br><br>
+</form>
+<button  class="but" onclick="pre()">Previous</button>
+<button  class="but" onclick="print1()">print</button>
+
+
+</div>
+
+
+
+<script>
+var x=document.getElementById("r1");
+var y=document.getElementById("r2");
+
+function next()
+{
+x.style.display="none";
+y.style.display="block";
+}
+
+function pre()
+{
+x.style.display="block";
+y.style.display="none";
+}
+
+function print1()
+{
+ if(x.style.display="none")
+ {
+  x.style.display="block";
+ }
+ if(y.style.display="none")
+ {
+  y.style.display="block";
+ }
+window.print();
+}
+</script>
+</body>
+</html>
